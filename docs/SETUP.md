@@ -3,7 +3,7 @@
 - https://github.com/alphagov/govuk-frontend
 - https://frontend.design-system.service.gov.uk
 
-## Install with Node.js package manager (npm)
+## Install with Node.js package manager (npm)
 
 🔗 https://frontend.design-system.service.gov.uk/installing-with-npm/#install-with-node-js-package-manager-npm
 
@@ -46,19 +46,39 @@ https://www.npmjs.com/package/sass
 
 https://frontend.design-system.service.gov.uk/get-started/#get-started
 
-cp -R node_modules/govuk-frontend/dist/govuk/govuk-frontend.min.css styles/
+Make some files/folders necessary for a simple page:
+
+`touch index.html`
+
+`mkdir styles`
+
+`mkdir scripts`
+
+Get the files needed from the lib:
+
+CSS
+
+`cp -R node_modules/govuk-frontend/dist/govuk/govuk-frontend.min.css styles/`
 
 ```bash
 copy the node_modules/govuk-frontend/dist/govuk/govuk-frontend.min.css file into your application
 ```
 
+ASSETS
+
 `cp -R node_modules/govuk-frontend/dist/govuk/assets/ assets`
+
+Add the favicon to root.
+
+`cp node_modules/govuk-frontend/dist/govuk/assets/images/favicon.ico .`
 
 ```bash
 /node_modules/govuk-frontend/dist/govuk/assets/images folder to <YOUR-APP>/assets/images
 /node_modules/govuk-frontend/dist/govuk/assets/fonts folder to <YOUR-APP>/assets/fonts
 /node_modules/govuk-frontend/dist/govuk/assets/manifest.json file to <YOUR-APP>/assets
 ```
+
+JS
 
 ```bash
 copy the node_modules/govuk-frontend/dist/govuk/govuk-frontend.min.js file into your application
@@ -70,7 +90,11 @@ copy the node_modules/govuk-frontend/dist/govuk/govuk-frontend.min.js file into 
 
 > Uncaught TypeError: Failed to resolve module specifier "scripts/govuk-frontend.min.js". Relative references must start with either "/", "./", or "../".
 
-## Extra
+See [Check an example page](https://frontend.design-system.service.gov.uk/install-using-precompiled-files/#check-an-example-page)
+
+- [example.html](../src/example.html)
+
+## Extra
 
 `npm install --save-dev jest`
 
